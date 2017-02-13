@@ -27,7 +27,7 @@ data$date <- as.Date(data$date)
 ```
 
 ## What is mean total number of steps taken per day?
-```{r}
+```{r total_number_of_steps}
 # Calculate the total of steps by date and exclude NA
 steps.date.total <- tapply(data$steps, data$date, sum, na.rm=TRUE)
 
@@ -41,7 +41,7 @@ median(steps.date.total)
 
 
 ## What is the average daily activity pattern?
-```{r}
+```{r daily_activity_pattern}
 # Average steps per interval
 steps.interval.mean <- tapply(data$steps, data$interval, mean, na.rm=TRUE)
 
@@ -61,7 +61,7 @@ steps.interval.mean[which.max(steps.interval.mean)]
 
 
 ## Imputing missing values
-```{r}
+```{r imputted_values}
 # Total number of missing values
 sum(is.na(data))
 
@@ -93,7 +93,7 @@ median(imputed.steps.date.total)
 Sys.setlocale("LC_ALL", "en_US.UTF-8") # Set days into english on local computer
 ```
 ## Are there differences in activity patterns between weekdays and weekends?
-```{r}
+```{r day_type_differences}
 # Create a new two level factor column with weekend and weekdays
 data.imputed$day <- sapply(data.imputed$date, function(date){
   day <- weekdays(date)

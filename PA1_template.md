@@ -33,7 +33,7 @@ steps.date.total <- tapply(data$steps, data$date, sum, na.rm=TRUE)
 hist(steps.date.total, main = "Total number of steps per day", xlab = "Total steps")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
+![](PA1_template_files/figure-html/total_number_of_steps-1.png)<!-- -->
 
 ```r
 # Calculate the mean and the median
@@ -70,7 +70,7 @@ plot(
 )
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+![](PA1_template_files/figure-html/daily_activity_pattern-1.png)<!-- -->
 
 ```r
 # Highest 5-minute interval
@@ -115,7 +115,7 @@ hist(
 )
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
+![](PA1_template_files/figure-html/imputted_values-1.png)<!-- -->
 
 ```r
 # Calculate the mean and the median
@@ -161,4 +161,4 @@ xyplot(
 )
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+![](PA1_template_files/figure-html/day_type_differences-1.png)<!-- -->
